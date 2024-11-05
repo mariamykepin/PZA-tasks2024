@@ -1,0 +1,34 @@
+# .github/workflows/deploy.yml
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+      - name: Login to Docker Hub
+        run: echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+
+      - name: Build and push Docker image
+        run: |
+          docker build -t your-dockerhub-username/book-management-api .
+          docker tag your-dockerhub-username/book-management-api your-dockerhub-username/book-management-api:latest
+          docker push your-dockerhub-username/book-management-api:latest
