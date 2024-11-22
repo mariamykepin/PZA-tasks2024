@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Root Variables */
+  :root {
+    --purple-light: #e9d5ff;
+    --purple-main: #a855f7;
+    --purple-dark: #7e22ce;
+    --purple-bg: #f3e8ff;
+    --white: #ffffff;
+    --black: #1a1a1a;
+    --gray: #6b7280;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--purple-bg);
+    color: var(--black);
+    line-height: 1.6;
+  }
+  
+  /* Headers */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--purple-dark);
+    margin-bottom: 1rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  /* Links */
+  a {
+    color: var(--purple-main);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: var(--purple-dark);
+  }
+  
+  /* Buttons */
+  button {
+    background-color: var(--purple-main);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: var(--purple-dark);
+  }
+  
+  /* Sections */
+  section {
+    padding: 2rem 1rem;
+    margin: 1rem 0;
+    background-color: var(--purple-light);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: var(--purple-dark);
+    color: var(--white);
+  }
+  
+  footer a {
+    color: var(--purple-light);
+  }
+  
+  menubar {
+    display: flex;
+  }

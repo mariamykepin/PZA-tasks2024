@@ -11,8 +11,8 @@ const Projects: React.FC = () => {
 
   useEffect(() => {
     setProjects([
-      { id: 1, title: 'Project One', description: 'Description for project one.' },
-      { id: 2, title: 'Project Two', description: 'Description for project two.' },
+      { id: 1, title: 'Programming Project', description: 'You can visit my github at ....' },
+      { id: 2, title: 'Design Project', description: 'You can visit my dribbbles at ...' },
     ]);
   }, []);
 
